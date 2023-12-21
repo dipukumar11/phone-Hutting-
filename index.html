@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+    <title>Phone Huntting</title>
+</head>
+<body>
+    <header>
+        <section>
+            <div class="bg-yellow-400 p-10  text-center">
+                <h1 class="text-6xl text-center mb-10">Search your phone</h1>
+                <input id="input" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                <button onclick="searchClick()" class="btn btn-secondary">Search Phone</button>
+
+            </div>
+        </section>
+
+
+
+    </header>
+
+    <main>
+
+        <section>
+            <div id="loddingSpner" class="text-center my-20 hidden">
+                <span class="loading loading-ring loading-lg"></span>
+            </div>
+        </section>
+
+        <section>
+            <div id="phoneCard" class="grid grid-cols-4 gap-5">
+
+
+               
+
+
+            </div>
+           <div id="showAll" class="hidden m-auto text-center mt-8">
+            <button onclick="showAllButton()" class="btn btn-success">Show all</button>
+           </div>
+
+        </section>
+
+
+        <div id="modal-continer">
+            <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+        </div>
+
+
+
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
